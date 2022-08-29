@@ -1,6 +1,3 @@
-# Veg-Ricetta with Create React App
+# Covid Tracker React App
 
-Veg-recipe is an application which, given an initial input, returns you vegetarian recipes.
-
-
-
+Covid Tracker is an application that visualize covid-related data in United States.
