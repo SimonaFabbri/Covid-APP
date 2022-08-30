@@ -17,7 +17,7 @@ function Home() {
       setGraphData(res);
     });
   }
-  const isMobile = useMediaQuery({ maxWidth: 660 });
+ 
 
   return (
     <div>

@@ -16,6 +16,7 @@ import StatesLinkList from "../components/StatesLinkList";
 function Home() {
   const [graphData, setGraphData] = React.useState();
   const params = useParams();
+  const isMobile = useMediaQuery({ maxWidth: 660 });
 
   React.useEffect(() => {
     getData();
@@ -26,8 +27,6 @@ function Home() {
       setGraphData(res);
     });
   }
-
-  const isMobile = useMediaQuery({ maxWidth: 660 });
 
   return (
     <div>

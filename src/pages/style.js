@@ -8,8 +8,14 @@ export const headerStyle = {
   backgroundColor: "#002b36",
 };
 
-export const containerStyleLi = {
+export const containerStyleLiMobile = {
   display: "grid",
+
+  gridTemplateColumns: "auto auto  ",
+};
+
+export const containerStyleLi = {
+  ...containerStyleLiMobile,
   gridTemplateColumns: "auto auto auto auto",
 };
 
