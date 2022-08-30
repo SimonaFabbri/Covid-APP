@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import {
   ResponsiveContainer,
   LineChart,
@@ -7,13 +7,15 @@ import {
   YAxis,
   Legend,
   Tooltip,
-  Area,
-  ComposedChart,
   CartesianGrid,
   Label,
 } from "recharts";
+import { graphStyle } from "./styleGraph";
 
 function Graph({ data }) {
+  //const reversedNum = (num) =>
+  //  parseFloat(num.split("").reverse().join("")) * Math.sign(num);
+
   return (
     <div style={graphStyle}>
       <ResponsiveContainer width="90%" height="100%" minHeight="600px">
@@ -41,12 +43,3 @@ function Graph({ data }) {
 }
 
 export default Graph;
-
-/// STYLE
-const graphStyle = {
-  minHeight: "600px",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  width: "100%",
-};

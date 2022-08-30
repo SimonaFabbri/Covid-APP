@@ -1,14 +1,19 @@
-import React, { useContext } from "react";
-
-import { Link } from "react-router-dom";
+import React from "react";
+import {
+  titleStyle,
+  headerStyle,
+  styleLink,
+  MouseOver,
+  MouseOut,
+  onClick,
+} from "./style";
+import { Link, useParams } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
-import { useParams, useNavigate } from "react-router-dom";
 import Graph from "../components/Graph";
 import { getState } from "../utils/api";
 import StatesLinkList from "../components/StatesLinkList";
-//////////////////////// DISPLAY RESPONSIVE ////////////////////////
 
-function Home(props) {
+function Home() {
   const [graphData, setGraphData] = React.useState();
   const params = useParams();
 
@@ -21,17 +26,25 @@ function Home(props) {
       setGraphData(res);
     });
   }
+
   const isMobile = useMediaQuery({ maxWidth: 660 });
 
   return (
-    <div style={styleBox}>
-      <header style={{ backgroundColor: "#002b36" }}>
+    <div>
+      <header style={headerStyle}>
         <h1 style={titleStyle}>COVID TRACKER : {params.stateCode}</h1>
       </header>
       <Graph data={graphData} />
       <ul>
         <li>
-          <Link to="/">BACK TO ALL STATES</Link>
+          <Link
+            style={styleLink}
+            onMouseOver={MouseOver}
+            onMouseOut={MouseOut}
+            to="/"
+          >
+            BACK TO ALL STATES
+          </Link>
         </li>
         <StatesLinkList />
       </ul>
@@ -40,11 +53,3 @@ function Home(props) {
 }
 
 export default Home;
-
-//////////////////////// STYLES ////////////////////////
-const styleBox = {};
-
-const titleStyle = {
-  color: "#fdf6e3",
-  padding: "4px 12px",
-};
