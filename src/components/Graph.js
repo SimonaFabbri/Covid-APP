@@ -13,8 +13,7 @@ import {
 import { graphStyle } from "./styleGraph";
 
 function Graph({ data }) {
-  //const reversedNum = (num) =>
-  //  parseFloat(num.split("").reverse().join("")) * Math.sign(num);
+  //const reversedNum = (data) => data.split("").reverse().join("");
 
   return (
     <div style={graphStyle}>

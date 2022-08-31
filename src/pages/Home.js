@@ -1,5 +1,4 @@
 import React from "react";
-import { useMediaQuery } from "react-responsive";
 import Graph from "../components/Graph";
 import { getGlobal } from "../utils/api";
 import StatesLinList from "../components/StatesLinkList";
@@ -17,7 +16,6 @@ function Home() {
       setGraphData(res);
     });
   }
- 
 
   return (
     <div>
