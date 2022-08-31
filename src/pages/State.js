@@ -7,7 +7,7 @@ import {
   MouseOut,
 } from "./style";
 import { Link, useParams } from "react-router-dom";
-import { useMediaQuery } from "react-responsive";
+
 import Graph from "../components/Graph";
 import { getState } from "../utils/api";
 import StatesLinkList from "../components/StatesLinkList";
