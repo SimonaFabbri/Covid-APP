@@ -9,6 +9,9 @@ export const headerStyle = {
 };
 
 export const containerStyleLiMobile = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
   display: "grid",
 
   gridTemplateColumns: "auto auto  ",
@@ -23,6 +26,8 @@ export const StyleLi = {
   fontFamily: "Montserrat",
   paddingTop: "5px",
 };
+
+export const contenetStyle = {};
 
 export const styleLink = {
   color: "black",
